@@ -41,7 +41,7 @@ export function ConsultantCard({ consultant }: ConsultantCardProps) {
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="bg-slate-50 pb-4">
+      <CardHeader className=" pb-4">
         <div className="flex items-start justify-between">
           <div className="flex items-center space-x-4">
             <Avatar className="h-12 w-12">
