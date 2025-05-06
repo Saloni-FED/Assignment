@@ -50,7 +50,7 @@ export function ConsultantList({ consultants }: ConsultantListProps) {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex-1">
+        <div className="flex-1 w-full">
           <Label htmlFor="search" className="mb-2 block">
             Search
           </Label>
@@ -61,12 +61,12 @@ export function ConsultantList({ consultants }: ConsultantListProps) {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div className="w-full md:w-48">
+        <div className="w-full flex-1">
           <Label htmlFor="location" className="mb-2 block">
             Location
           </Label>
           <Select value={locationFilter} onValueChange={setLocationFilter}>
-            <SelectTrigger id="location">
+            <SelectTrigger id="location" className="w-full">
               <SelectValue placeholder="Any location" />
             </SelectTrigger>
             <SelectContent>
@@ -79,12 +79,12 @@ export function ConsultantList({ consultants }: ConsultantListProps) {
             </SelectContent>
           </Select>
         </div>
-        <div className="w-full md:w-48">
+        <div className="w-full flex-1">
           <Label htmlFor="experience" className="mb-2 block">
             Experience
           </Label>
           <Select value={experienceFilter} onValueChange={setExperienceFilter}>
-            <SelectTrigger id="experience">
+            <SelectTrigger id="experience" className="w-full">
               <SelectValue placeholder="Any experience" />
             </SelectTrigger>
             <SelectContent>
